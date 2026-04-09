@@ -1,0 +1,24 @@
+.mainTable {
+    padding: 15px 30px;
+    table {
+        width: 100%;
+        height: 800px;
+        border: 1px solid #000000;
+        overflow: auto;
+        thead {
+            tr {
+                th {
+                    padding: 10px;
+                    border: 1px solid #000000;
+                }
+            }
+        }
+        tbody {
+            tr {
+                td {
+                    padding-inline: 10px;
+                }
+            }
+        }
+    }
+}

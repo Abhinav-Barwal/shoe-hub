@@ -1,0 +1,164 @@
+@use './layouts/header';
+@use './layouts/footer';
+@use './layouts/dashboard';
+@use './layouts/popup';
+@use './layouts/apitesting';
+@use './layouts/gallery';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    inline-size: 100vw;
+    block-size: 100vh;
+    background-color: #000000;
+    .loginContainer {
+        max-width: 600px;
+        width: 100%;
+        background-color: #000000;
+        border-radius: 30px;
+        padding: 30px 15px;
+        border: 1px solid #ffffff;
+        .logo {
+            img {
+                margin-left: auto;
+            }
+        }
+        .login-cont {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .inner-cont {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                .username,.login,.fblogin {
+                    padding: 15px 20px;
+                    border: 1px solid #ffffff;
+                    border-radius: 30px;
+                    position: relative;
+                    input {
+                        height: 30px;
+                        background-color: transparent;
+                        border: none;
+                        border-bottom: 1px solid #ffffff;
+                        color: #ffffff;
+                        &:focus-visible {
+                            border: none;
+                            outline: none;
+                            border-bottom: 1px solid #ffffff;
+                        }
+                    }
+                    label {
+                        position: absolute;
+                        color: #ffffff;
+                        top: 20px;
+                        left: 20px;
+                        transition: 0.5s ease-in-out;
+                    }
+                    &.focused {
+                        label {
+                            top: -11px;
+                            left: 27px;
+                            background: #000000;
+                            padding-inline: 5px;
+                        }
+                    }
+
+                }
+                .forgot {
+                    text-align: end;
+                    a {
+                        color: #ffffff;
+                    }
+                }
+                p {
+                    color: #ffffff;
+                    text-align: center;
+                }
+                .login ,.fblogin {
+                    margin-top: 30px;
+                    text-align: center;
+                    padding-block: 20px;
+                    background-color: transparent;
+                    color: #ffffff;
+                    a {
+                        text-decoration: none;
+                        color: #ffffff;
+                    }
+                }
+                .fblogin {
+                    margin-top: 0;
+                }
+            }
+        }
+        .bottom {
+            position: relative;
+            img {
+                margin-inline: auto;
+            }
+            .btn {
+                padding: 16px 20px;
+                background: transparent;
+                border-radius: 30px;
+                border: 1px solid #ffffff;
+                color: #ffffff;
+                position: absolute;
+                top: 30px;
+                left: 135px;
+            }
+        }
+        
+    }
+}
+.boxs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.btn {
+    background-color: grey;
+    color: #ffffff;
+    padding: 16px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.primary-btn {
+    padding: 7px 20px;
+    background-color: grey;
+    color: #ffffff;
+    border-radius: 7px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    &:hover {
+        background-color: #ffffff;
+        color: grey;
+        border: 1px solid grey;
+    }
+}
+.d-none {
+    display: none;
+}
+.emptyError {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 30px;
+    color: red;
+}
+.main-loader {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6117647059);
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
